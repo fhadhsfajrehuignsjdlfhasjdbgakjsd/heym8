@@ -1,0 +1,52 @@
+#settingsFormBox{
+    background-color: #a0cccc;
+    margin: 0% auto;
+    padding: 3%;
+    border-radius: 2%;
+}
+
+@media (min-width: 0px){
+    #settingsFormBox{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1000px){
+    #settingsFormBox{
+        width: 80%;
+    }
+}
+
+.settingsForm{
+    width: auto;
+}
+
+.settingsForm .languagesInput{
+    display: inline-block;
+    margin: 3%;
+}
+
+.settingsForm .submitSettingsForm{
+    margin: 3% auto;
+    display: block;
+}
+
+#settingsFormBox .settingsNote{
+    font-size: 170%;
+    text-align: center;
+}
+
+.settingsForm #dobInputBox{
+    width: auto;
+}
+
+.settingsForm input[type="file"]{
+    display: none;
+}
+
+.settingsForm #deleteProfilesDobBox{
+    width: auto;
+    margin: 2% auto;
+    display: table;
+    font-size: 120%;
+}

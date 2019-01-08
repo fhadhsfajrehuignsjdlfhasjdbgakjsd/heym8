@@ -1,0 +1,22 @@
+@media (min-width: 0px){
+    #picturesBox{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px){
+    #picturesBox{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+#picturesBox{
+    padding: 0%;
+    background-color: #d2e2e2;
+    display: inline-block;
+}
+
+.pictureBox{
+    
+}

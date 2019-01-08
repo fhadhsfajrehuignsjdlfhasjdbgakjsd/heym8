@@ -1,0 +1,20 @@
+<div class="modal fade" id="editStatusWindow" tabindex="-1" role="dialog" aria-labelledby="editStatusWindow" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title w-100 modalHeader">Edit status</h1>
+      </div>
+      <div class="modal-body">
+        <form action="{% url 'users:editStatus' %}" method="POST" id="editStatusForm">
+          {% csrf_token %}
+          <p class="inputHeader">Status</p>
+          <textarea name="status" maxlength="200" id="statusInput" rows="3" class="form-control" autofocus autocomplete="off">{% if status %}{{ status }}{% endif %}</textarea>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" form="editStatusForm" class="btn bttn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

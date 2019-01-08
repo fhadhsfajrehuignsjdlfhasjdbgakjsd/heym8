@@ -1,0 +1,85 @@
+{% extends "core/core_template_PC.html" %}
+{% comment %} 
+    all links to css and js are defined in this file
+    lmRef for left menu links' styles and js
+    rmRef for right menu link's styles
+    rmGetRef for right menu link's js(links which just open another section on the same page)
+    externalRef for right menu link's js(links which redirect to another page)
+    content and rightMenu are containers for content and right menu respectively
+{% endcomment %}
+{% block customStyles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'core/core_uinterface_style_PC.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'feed/css/feed_style_PC.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/user_page_style_PC.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'communities/css/communities_style_PC.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'chat/css/chat_style_PC.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/settings_style_PC.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'base/css/albums_style_PC.css'%} ">
+    <link rel="stylesheet" type="text/css" href="{% static 'base/css/album_Pictures_style_PC.css' %}">
+{% endblock customStyles %}
+
+{% block customJS %}
+    <script src="{% static 'core/core_uinterface_JS_PC.js' %}"></script>
+    <script src="{% static 'feed/js/feed_JS_PC.js' %}"></script>
+    <script src="{% static 'users/js/user_page_JS_PC.js' %}"></script>
+    <script src="{% static 'communities/js/communities_JS_PC.js' %}"></script>
+    <script src="{% static 'chat/js/chat_JS_PC.js' %}"></script>
+    <script src="{% static 'users/js/settings_JS_PC.js' %}"></script>
+{% endblock customJS %}
+
+{% block pageContent %}
+    <div id="leftMenu">
+        {% block leftMenu %}
+            <ul class="lm">
+
+                <li id="logo-container">
+                    <a href="/" id="logo">HeyM8</a>
+                </li>
+
+                <li class="lm-item">
+                    <a class="lmRef fullAjaxRef" id="self" href="{% url 'users:userPage' uniqueURL %}">My page</a>
+                </li>
+
+                <li class="lm-item">
+                    <a class="lmRef fullAjaxRef" id="feed" href="{% url 'feed:feed' 'tan' %}">Thoughts&News</a>
+                </li>
+
+                <li class="lm-item">
+                    <a class="lmRef fullAjaxRef" id="chat" href="#">Chat</a>
+                </li>
+
+                <li class="lm-item">
+                    <a class="lmRef fullAjaxRef" id="mates" href="#">Mates</a>
+                </li>
+
+                <li class="lm-item">
+                    <a class="lmRef fullAjaxRef" id="communities" href="#">Communities</a>
+                </li>
+
+                <li class="lm-item">
+                    <a class="lmRef fullAjaxRef" id="favourite" href="#">Favourite</a>
+                </li>
+
+                <li class="lm-item">
+                    <a class="lmRef fullAjaxRef" id="settings" href="{% url 'users:settings' 'pi' %}">Settings</a>
+                </li>
+
+                <li class="lm-item">
+                    <a class="lmRef fullAjaxRef" id="logout" href="{% url 'users:logout' %}">Log out</a>
+                </li>
+                
+            </ul>  
+        {% endblock leftMenu %}
+    </div>
+    
+    <div id="content">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <div id="rightMenu">
+        {% block rightMenu %}
+        {% endblock rightMenu %}
+    </div>
+{% endblock pageContent %}
+

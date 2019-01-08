@@ -1,0 +1,19 @@
+{% extends "core/core_template_PC.html" %} 
+
+{% block customStyles %}
+    <link rel="stylesheet" href="{% static 'users/css/intro_style_PC.css' %}">
+{% endblock customStyles %}
+
+{% block pageContent %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3 center-text">Modern way to meet new people and get new emotions!</h1>
+        </div>
+    </div>
+    <div id="container" class="content">
+        <div class="texxxt">
+            <h1 class="header center-text">General information</h1>
+            <h2 class="center-text"><span class="question">What is HeyM8?</h2></span><p>HeyMate is a platform for making new friends.</p>
+        </div>
+    </div>
+{% endblock pageContent %}

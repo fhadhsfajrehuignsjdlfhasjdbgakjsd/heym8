@@ -1,0 +1,26 @@
+<ul class="rm">
+
+    {% if owner %}
+    <li class="rm-item">
+        <a class="rmRef fullAjaxRef" href="{% url 'users:settings' 'pi' %}">Edit profile</a>
+    </li>
+    
+    <li class="rm-item">
+        <a href="#editStatusWindow" data-toggle="modal" id="editStatus" class="rmRef">Edit status</a>
+    </li>
+
+    <li class="rm-item">
+        <a href="#" id="changeAvatar" class="rmRef">Change profile photo</a>
+    </li>
+
+    {% else %}
+    <li class="rm-item">
+        <a class="rmRef" href="#">Add to Mates</a>
+    </li>
+
+    <li class="rm-item">
+        <a class="rmRef" href="#">Block</a>
+    </li>
+    {% endif %}
+
+</ul>

@@ -1,0 +1,18 @@
+<div class="modal fade" id="createThoughtWindow" tabindex="-1" role="dialog" aria-labelledby="createThoughtWindow" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title w-100 modalHeader">New thought</h1>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'users:newThought' %}" method="POST" id="newThoughtsForm">
+              {% csrf_token %}
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" form="newThoughtForm" class="btn bttn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>

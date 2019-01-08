@@ -1,0 +1,110 @@
+<!-- Show thoughts tab when page is loaded -->
+<div id="userPage">
+    
+    <div id="commonUserInfo">
+
+        <div id="mainPictureBox">
+            <img class="img-thumbnail" id="mainPicture" class="imgg" src="{% if mainPicture %}{{ mainPicture }}{% elif gender == 'm' %}{% static 'core/images/male_avatar.png' %}{% elif gender == 'f' %}{% static 'core/images/female_avatar.png' %}{% else %}{% static 'core/images/none_avatar.png' %}{% endif %}" alt="Avatar">
+        </div>
+
+        <div id="usernameAndStatusBox">
+
+            <div id="usernameBox">
+                {{ username }}
+            </div>
+            
+            <div id="statusBox">
+                {% if status %}{{ status }}{% else %}Nothing yet{% endif %}
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <div id="userInfoSections">
+
+        <div class="sectionsNavbar">
+
+            <ul class="nav nav-tabs nav-justified" id="sectionsTabs" role="tablist">
+
+                <li class="nav-item">
+                    <a class="nav-link active" id="thoughtsTab" data-toggle="tab" href="#thoughtsSection" role="tab" aria-controls="thoughtsSection" aria-selected="true">Thoughts</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" id="personalInfoTab" data-toggle="tab" href="#personalInfoSection" role="tab" aria-controls="personalInfoSection" aria-selected="false">Info</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" id="ratingTab" data-toggle="tab" href="#ratingSection" role="tab" aria-controls="ratingSection" aria-selected="false">Rating</a>
+                </li>
+                
+                {% if allowedToSeePics %}
+                    <li class="nav-item">
+                        <a class="nav-link" id="picturesTab" data-toggle="tab" href="#picturesSection" role="tab" aria-controls="picturesSection" aria-selected="false">Pics</a>
+                    </li>
+                {% endif %}
+                
+
+            </ul>
+
+        </div>
+
+        <div class="tab-content" id="sectionsTabsContent">
+
+            <div class="tab-pane active" id="thoughtsSection" role="tabpanel" aria-labelledby="thoughtsTab">
+
+                {% if owner %}
+                    <div class="createThoughtBox text-centered">
+                        <a href="#createThoughtWindow" data-toggle="modal" class="createThought">Create new thought</a>
+                    </div>
+                {% endif %}
+                
+
+                <div class="thought">
+                    <pre class="thoughtText">
+I heard you told your friends that I'm just not your type
+If that's how you really feel, then why'd you call last night?
+You say all I ever do is just control your life
+But how you gonna lie like that, how you gonna lie like that?
+Yeah, I heard you said I ain't the type for you
+I don't regret it though, I learned from it
+They should have you locked up for all the time you stole from us
+Took you out when I had no money
+Only person that you ever cared about was you, that's why it's so funny
+You want somebody that'll keep you warm at night, then tell me, why you actin' cold to me?
+You ain't the only one to blame no one
+The one that made you rich when I bought every lie you sold to me
+Yeah, heard you threw away the pictures 
+                    </pre>
+                </div>
+
+            </div>
+
+            <div class="tab-pane fade" id="personalInfoSection" role="tabpanel" aria-labelledby="personalInfoTab">
+                <p>Personal info</p>
+                <i class="fas fa-stroopwafel"></i>
+                
+            </div>
+
+            <div class="tab-pane fade" id="ratingSection" role="tabpanel" aria-labelledby="ratingTab">
+                <p>Rating</p>
+            </div>
+            {% if allowedToSeePics %}
+                <div class="tab-pane fade" id="picturesSection" role="tabpanel" aria-labelledby="pitcuresTab">
+                        
+                    {% include "users/components/user_Albums_PC.html" %}
+
+                </div>
+            {% endif %}
+            
+
+        </div>
+
+    </div>
+
+
+</div>
+
+{% include "modals/edit_Status_Modal_PC.html" %}
+{% include "modals/create_Thought_Modal_PC.html" %}

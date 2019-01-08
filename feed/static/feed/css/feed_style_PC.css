@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+.note{
+    background-color: #f3e3b0;
+    font-family: 'Raleway', sans-serif;
+    width: 80%;
+    margin: 0% auto;
+}
+
+.noteText{
+    background-color: inherit;
+    width: 80%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 150%;    
+    margin: auto;
+    border: none;
+    white-space: pre-wrap;
+    word-wrap: break-word; 
+    word-break: keep-all;
+    overflow-wrap: normal;
+}

@@ -1,0 +1,63 @@
+<div id="settingsFormBox">
+    {% if section == 'pi' %}
+        <form action="{% url 'users:settings' 'pi' %}" method="POST" class="settingsForm" id="piForm">
+            {% csrf_token %}
+            <div id="usernameInputBox">
+                <p class="inputHeader">Username</p>
+                <input type="text" autocomplete="off" name="username" class="form-control" id="usernameInput" value="{{ currentUsername }}" placeholder="Username">
+            </div>
+
+            <div id="genderInputBox">
+                <p class="inputHeader">Gender</p>
+                <select autocomplete="off" class="form-control form-control-lg" id="genderInput" name="gender">
+                    {% for gender in genders %}
+                    <option value="{{gender|slice:'1'}}"{% if gender|first == currentGender %} selected {% endif %}>{{ gender|capfirst }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div id="dobInputBox"><!-- date of birth -->
+                <p class="inputHeader">Date of birth</p>
+                <input type="date" autocomplete="off" name="dob" id="dobInput" class="form-control" value="{{ currentDob }}">
+                
+                <div id="deleteProfilesDobBox" {% if currentDob == 'None' %} style="display:none" {% endif %}>
+                    <input type="checkbox" id="deleteProfilesDob" name="deleteProfilesDob">
+                    <label for="deleteProfilesDob">None</label>
+                </div>
+            </div>
+
+            <div id="languagesInputBox">
+                <p class="inputHeader">Languages</p>           
+                {% for language in languages %}
+                <div class="languagesInput">
+                    <input type="checkbox" autocomplete="off" id="{{ language }}" name="languages" value="{{ language }}" {% if language in currentLanguages %}checked{% endif %} >
+                    <label for="{{ language }}">{{ language|capfirst }}</label>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div id="countryInputBox">
+
+            </div>  
+
+            {% if  currentCity%}
+            <div id="cityInputBox">
+
+            </div>
+            {% endif %}
+
+            <div id="uniqueURLInputBox">
+
+            </div>
+
+            <input type="submit" class="submitSettingsForm btn-lg" value="Save">
+        </form>
+        <p class="settingsNote"></p>
+    {% elif section == 'i' %}
+        <p>Here will be interests</p>
+    {% elif section == 'p' %}
+        <p>Here will be privacy</p>
+    {% elif section == 'e' %}
+        <p>Here will be smth else</p>
+    {% endif %}
+</div>

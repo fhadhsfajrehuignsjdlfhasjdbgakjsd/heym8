@@ -1,0 +1,10 @@
+<!-- styles are set in static/common/css/album_Pictures_style_PC.css -->
+<div id="picturesBox">
+    {% for pic in pictures %}
+    <div class="pictureBox">
+        <img class="imgg" src="{{ pic.url }}" alt="img">
+    </div>
+    {% empty %}
+        <h1 class="text-centered">Nothing yet</h1>
+    {% endfor %}
+</div>

@@ -1,0 +1,43 @@
+.jumbotron {
+    background-color: #ebbfbf;
+}
+
+#logo a{
+    color: black;
+}
+
+#logo a:hover{
+    text-decoration: none;
+}
+
+#in-preloader, #up-preloader{
+    display: none;
+}
+
+.enteringForms{
+    height: 80%;
+    width: 60%;
+    top: 10%; right: 20%;bottom: 10%;left: 20%;
+    position: relative;
+}
+
+.signIn{
+    height: 100%;
+    width: 45%;
+    margin-right: 5%;
+    float: left;
+    text-align: center;
+}
+
+.signUp{
+    height: 100%;
+    width: 45%;
+    float: right;
+    margin-right: 5%;
+    text-align: center;
+}
+
+input{
+    display: block;
+    margin: auto;
+}

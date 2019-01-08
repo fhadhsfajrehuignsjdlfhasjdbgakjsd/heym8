@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+{% block htmlLanguage %}
+<html lang="en"></html>
+{% endblock htmlLanguage %}
+
+<head>  
+    <meta name="description" content="Modern way to meet new people and get new emotions." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    {% block customMeta %}
+    {% endblock customMeta %}
+
+    {% block coreStyle %}
+    <link rel="shortcut icon" href="{% static 'core/H8_icon.ico' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap-4/css/bootstrap.min.css' %}">        
+    <link rel="stylesheet" href="{% static 'core/core_style_PC.css' %}"> 
+    {% endblock coreStyle %} 
+
+    {% block customStyles %}
+    {% endblock customStyles %}
+
+    {% block pageTitle %}
+    <title>HeyM8</title>
+    {% endblock pageTitle %} 
+
+</head>
+<body>
+
+    <div id="pageContent">
+        {% block pageContent %}
+        {% endblock pageContent %}
+    </div>
+
+    {% block coreJS %}
+    <script src="{% static 'admin/js/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'jquery-visible/jquery.visible.min.js' %}"></script>    
+    <script src="{% static 'popper/popper.min.js' %}"></script>
+    <script src="{% static 'fontawesome/js/all.js' %}"></script>
+    <script src="{% static 'bootstrap-4/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'core/core_JS_PC.js' %}"></script>
+    {% endblock coreJS %}
+
+    {% block customJS %}
+    {% endblock customJS %}
+
+</body>
+</html>

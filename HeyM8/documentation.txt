@@ -1,0 +1,117 @@
+                    Startup’s success usually depends on founders’ ability to learn.
+                    Things should be done with soul.
+                    Details of 1st implementation plan
+    Thought - user’s post. Users share with other users thoughts. Thoughts can be permanent and temporary.
+
+                    Metrics
+What do we need to measure:{
+“(6)Relation number of users who were offline 7+ days by moment to 4 multiplied by 100. If user is offline for 7+ days than he has probably left the platform. To control outcome.”,
+“Number of users registered daily(1), weekly(2), on the whole(4). (5)Number of this week 4 users divided by last week 4 users multiplied by 100. To control income.”,
+“(7)Number of conversations found using MeetMate divided by number of active users. To control the success of core interaction.”,
+“(8) Percentage of users who used thought system.(12) Users who have more than three people in MateList.”,
+    (9) “Percentage of users who had frictionless entry(who had more than 20 messages with first MeetMate found mate)”,
+    (10) “Relation of MeetMates which ended in more than 20 messages to total number of MeetMates multiplied by 100”
+    (11) “Relation of 12 to those who have given though one rate in RateMate.”
+}
+Week report sample:
+“
+Total users:4
+Percentage of active users: ‘100’ - 6
+Percentage of inactive users: 6
+Users registered this week:2
+Week growth: 5
+Average MeetMate usage:7
+MeetMate quality:10
+Percentage of people using thought system:8
+People who have more than three people in MateList:12
+RateMate popularity:11
+MeetMate popularity:13
+Entry curation quality:9
+”
+
+                                                                            RateMate
+Thoughts
+RateMate - system intended to give users opportunity to evaluate other users. 
+Users with high RateMate get more influence on platform. 
+This system must be based on characteristics which are really interesting to people. 
+Every week people will choose new characteristic themselves. First one will be based on:
+1) Erudition.
+2) Candor.
+3) Sense of humor(meme passion).
+4) What a nice person.
+    When will people rate other users? “They will be able to give a rate to those users who are in their MateList at any time.
+They will also be able to change their ratings.”
+    What sense is in it? “It brings competitiveness into platform. 
+The more user’s rating is the more people will see this user’s thoughts. Their will be shown in interesting more often 
+and they will get help in community advertising.”
+Stars or what? “Cats like stars.”   
+We got a star-like cat rating system. Max rating = 10. User can rate only users in his MateList. 
+Users with higher rating get more influence on platform(their content is shown in interesting section more often). 
+Final user’s rating is based on size of MateList and obtained RateMate.
+Finally
+Every user has rating which is based on RateMate rating and size of MateList. 
+The more the rating is the more often user’s content appears in interesting section. 
+Communities can be also rated by quality characteristic.
+MeetMate
+Thoughts
+MeetMate - algorithm for easy finding a mate with necessary traits. 
+You can find random mate and mate with necessary filters. Here with user can’t set filters with specific conditions 
+if he hasn’t given such information in his profile. After launching there can be to little users for filter search 
+so this function can be launched a little bit later. Function must be designed in a way which allows users not to get bored.
+Finally
+User can find random mate, random mate among members of community and mate with specific traits
+(user must also specify these traits in his profile). First, only random mate will be available, after we hit ~10k filter search 
+with 3 conditions will be available, after we hit ~150k unlimited filter search will be available.
+
+                                                                MateInfo
+Thoughts
+What information about themselves will users leave? “Geo position, political, sports, leisure, philosophy, inspiration sources. They will do it like:choose which of these phrases you find more suitable to your personality.”
+What is is info for? “This information is used to be shown to other users and main goal is to make MeetMate algorithm more qualified.”
+Info to specify in profile (all are optional, random order, nickname is specified when registered):
+1) Country
+2) City
+3) Language
+4) Gender
+5) Birthday
+6) Favorite themes to discuss(politics, sports and sportsmen, music and
+ musician, cinema and actors, science, philosophical stuff, things that concern me everyday, abstract topics)
+8) Favorite activities(watching sports, doing sports, reading, music, television, computer games, 
+watching memes, dancing, wasting time, traveling, walking, dancing)
+9) Life priorities(self-development, money, glory, power, family, 
+making new friends, entertainment, world development)
+10) Most valuable personal qualities(mind, honesty, 
+discipline, sense of humor(meme passion), ease in relation to life, humanity)
+Finally
+Special page with questions with answers where user makes choices relatively his personality.
+Geo situation is set via user’s agreement.
+                                                        BlockMate
+First, any user can block any other user. Blocked users’ content won’t be shown in interesting, 
+he won’t be able to look through your page and write to you. If user breaks rules accepted on platform 
+he should be blocked for some time. When user sends spam complaint he automatically blocks user. 
+
+Communities
+Here are little things to discuss. You can run, enroll and leave community. 
+… … …
+Platform constraints(Not allowed):
+
+    1) Explicit extremism/drugs propaganda
+    2) Suicide call
+    3) Sending spam
+    4) Discredit other users because of their nationality, gender and religion
+    5) Spreading adult content
+People report.
+Sanctions for breaking the rules are described in HeyM8/complaint/choices.py
+				… … … 
+			Settings
+1) Who can send community invitations(nobody, mates, all). Cheer up people in creation communities providing free ads opportunities.
+2) Open to new acquaintance(on, off)
+3) Who can see personal info(all, mates, only me)
+4) Who can see my geo position
+
+Основные фичи:
+1) МитМэйт. (Поиск мэйтов в определенными качествами, в определенном городе, среди членов определенного сообщества)
+2) РэйтМэйт. (В современном обществе люди привыкли давать оценки, теперь они смогут давать оценки личностным качествам.)
+3) Сэмплы для первых сообщений при знакомстве при помощи МитМэйта.
+4) Подарочные стикеры за определенные достижения на платформе.
+5) Бесплатная помощь основателям сообществ в продвижении сообществ(сообществ) "HeyM8 рекомендует".
+6) Люди не указывают(часто забываю об этом) свои фамилии и имена, что дает им большую свободу.

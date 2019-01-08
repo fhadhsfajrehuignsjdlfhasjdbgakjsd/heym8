@@ -1,0 +1,40 @@
+@media (min-width: 0px){
+    .albumsBox{
+        width: 100%;
+    }
+    
+    .albumsBox .albumBox{
+        width: 70%;
+        margin: 3% auto;
+    }
+}
+
+@media (min-width: 800px){
+    .albumsBox .albumBox{
+        width: 25%;
+        margin: 3%;
+        display: inline-block;
+    }
+}
+
+.albumsBox img{
+    background-color: inherit;
+}
+
+.albumsBox .albumName{
+    font-size: 120%;
+    font-weight: 600;
+    text-align: center;
+    overflow: auto;
+}
+
+.albumsBox .albumRef:hover{
+    cursor: pointer;
+}
+
+.albumsBox{
+    /* background-color: #f3e3b0; */
+    background-color: #f1ecec;
+    margin: 2% auto;
+    border-radius: 2%;
+}

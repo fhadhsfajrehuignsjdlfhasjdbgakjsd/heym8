@@ -1,0 +1,48 @@
+#pageContent{
+    width: 100%;
+    height: 100%;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.self-center{
+    margin: auto;
+}
+
+.content{
+    background-color: #a0cccc;
+    position: relative;
+    padding: 0.1% 2% 7% 2%;
+}
+
+@media (min-width: 0px) {
+    .content{
+        width: 100%;
+        font-size: 130%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content{
+        width: 60%;
+        left: 19%;
+        right: 19%;
+        font-size: 150%;
+        border-radius: 1%;
+    }
+}
+
+.content .texxxt .question{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.content .texxxt .header{
+    font-size: 170%;
+}
+
+.content .texxxt{
+    font-size: 120%;
+}

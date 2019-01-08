@@ -1,0 +1,140 @@
+#userPage{
+    background-color: #a0cccc;
+    padding: 3%;
+    border-radius: 2%;
+    height: auto;
+    margin: auto;
+    font-size: 130%;
+}
+
+@media (min-width: 0px){
+    #userPage{
+        width: 100%;
+    }
+    #userPage #mainPictureBox{
+        width: 50%;
+        margin: auto;
+    }
+    #userPage #usernameAndStatusBox{
+        width: 100%;
+    }
+    #userPage #usernameAndStatusBox #usernameBox{
+        margin: 2%;
+    }
+    #userPage #sectionsTabsContent .thought, #userPage #sectionsTabsContent .createThoughtBox, .albumsBox{
+        width: 100%;
+    }
+    
+    .albumsBox .albumBox{
+        width: 70%;
+        margin: 3% auto;
+    }
+}
+
+@media (min-width: 1200px){
+    #userPage{
+        width: 80%;
+    }
+    #userPage #mainPictureBox{
+        width: 30%;
+        float: left;
+    }
+    #userPage #usernameAndStatusBox{
+        width: 70%;
+        float: right;
+    }
+    #userPage #userInfoSections{
+        margin-top: 2%;
+    }
+}
+
+@media (min-width: 1600px){
+    #userPage #sectionsTabsContent .thought, #userPage #sectionsTabsContent .createThoughtBox{
+        width: 80%;
+    }
+}
+
+#userPage #commonUserInfo{
+    display: block;
+    overflow: auto;
+}
+
+#userPage #mainPictureBox #mainPicture{
+    background-color: #c8fff3;
+}
+
+#userPage #usernameAndStatusBox #usernameBox{
+    text-align: center;
+    font-weight: 500;
+    font-size: 150%;
+}
+
+#userPage #usernameAndStatusBox #statusBox{
+    background-color: antiquewhite;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+#userPage #editStatusWindow #statusInput{
+    font-size: 130%;
+    resize:vertical;
+}
+
+.bordered{
+    border: 3px solid red;
+}
+
+#userPage .sectionsNavbar{
+    background-color: antiquewhite;
+    border-radius: 4px;
+    margin-bottom: 1%;
+}
+
+#userPage #sectionsTabsContent{
+    background-color: inherit;
+    border-radius: 4px;
+}
+
+#userPage #sectionsTabsContent .thought{
+    /* background-color: #f3e3b0; */
+    background-color: #f1ecec;
+    margin: 2% auto;
+    border-radius: 2%;
+}
+
+#userPage #sectionsTabsContent .thoughtText{
+    background-color: inherit;
+    width: 80%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 130%;    
+    margin: auto;
+    border: none;
+    white-space: pre-wrap;
+    word-wrap: break-word; 
+    word-break: keep-all;
+    overflow-wrap: normal;
+}
+
+#userPage #sectionsTabsContent .createThoughtBox{
+    position: sticky;
+    top:1px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: auto;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+#userPage #sectionsTabsContent .createThought{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    font-size: 130%;
+}
+
+#userPage #sectionsTabsContent .createThought:hover, #userPage #sectionsTabsContent .createThought:active, #userPage #sectionsTabsContent .createThought:visited, #userPage #sectionsTabsContent .createThought:focus{
+    color: rgb(102, 99, 99);
+}

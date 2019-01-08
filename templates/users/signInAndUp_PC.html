@@ -1,0 +1,94 @@
+{% extends "core/core_template_PC.html" %}
+
+{% block customMeta %}
+{% endblock customMeta %}
+
+{% block customStyles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/signInAndUp_style_PC.css' %}">
+{% endblock customStyles %}
+
+{% block customJS %}
+    <script src="{% static 'users/js/signInAndUp_JS_PC.js' %}"></script>
+{% endblock customJS %}
+
+{% block pageTitle %}
+    <title>Sign in</title>
+{% endblock pageTitle %}
+
+{% block pageContent %} 
+    <div id="logo">
+        <div class="jumbotron text-center">
+            <h1><a href="/">HeyM8</a></h1>
+            <p>Modern way to meet new people and get new emotions.</p>
+        </div>
+    </div>
+    <div class="enteringForms">
+        <div class="signIn">
+            <h2>Sign in</h2>
+            <form class="signInForm" action="{% url 'users:signInAndUp' %}" method="POST"> 
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="id_Email">Email:</label>
+                    {{ signInForm.Email }}
+                </div>
+                <div class="form-group">
+                    <label for="id_Password">Password:</label>
+                    {{ signInForm.Password }}
+                </div>
+                <div class="checkbox">
+                    <label>{{ signInForm.RememberMe }}Remember me</label>
+                </div>
+                <input type="submit" value="Sign in" class="btn btn-default" id="submitSignIn">
+            </form>
+            <p class="notice" id="signInNotice"></p>
+            <div class="sk-fading-circle" id="in-preloader">
+                <div class="sk-circle1 sk-circle"></div>
+                <div class="sk-circle2 sk-circle"></div>
+                <div class="sk-circle3 sk-circle"></div>
+                <div class="sk-circle4 sk-circle"></div>
+                <div class="sk-circle5 sk-circle"></div>
+                <div class="sk-circle6 sk-circle"></div>
+                <div class="sk-circle7 sk-circle"></div>
+                <div class="sk-circle8 sk-circle"></div>
+                <div class="sk-circle9 sk-circle"></div>
+                <div class="sk-circle10 sk-circle"></div>
+                <div class="sk-circle11 sk-circle"></div>
+                <div class="sk-circle12 sk-circle"></div>
+            </div>
+        </div><!-- signIn -->
+        <div class="signUp">
+            <h2>Sign up</h2>
+            <form class="signUpForm" action="{% url 'users:signInAndUp' %}" method="POST"> 
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="id_username">Username:</label>
+                    {{ signUpForm.username }}
+                </div>
+                <div class="form-group">
+                    <label for="id_email">Email:</label>
+                    {{ signUpForm.email }}
+                </div>
+                <div class="form-group">
+                    <label for="id_password">Password:</label>
+                    {{ signUpForm.password }}
+                </div>
+                <input type="submit" value="Sign up" class="btn btn-default" id="submitSignUp">
+            </form>
+            <p class="notice" id="signUpNotice"></p>
+            <div class="sk-fading-circle" id="up-preloader">
+                <div class="sk-circle1 sk-circle"></div>
+                <div class="sk-circle2 sk-circle"></div>
+                <div class="sk-circle3 sk-circle"></div>
+                <div class="sk-circle4 sk-circle"></div>
+                <div class="sk-circle5 sk-circle"></div>
+                <div class="sk-circle6 sk-circle"></div>
+                <div class="sk-circle7 sk-circle"></div>
+                <div class="sk-circle8 sk-circle"></div>
+                <div class="sk-circle9 sk-circle"></div>
+                <div class="sk-circle10 sk-circle"></div>
+                <div class="sk-circle11 sk-circle"></div>
+                <div class="sk-circle12 sk-circle"></div>
+            </div>
+        </div><!-- signUp -->
+    </div><!-- enteringForms -->
+{% endblock pageContent %}

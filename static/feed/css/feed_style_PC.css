@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+.note{
+    /* background-color: #f3e3b0; */
+    background-color: #a0cccc;
+    font-family: 'Raleway', sans-serif;
+    margin: 2% auto;
+    border-radius: 2%;
+}
+
+@media (min-width: 0px){
+    .note, .createThoughtBox{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1000px){
+    .note, .createThoughtBox{
+        width: 80%;
+    }
+}
+
+#feedBox .createThoughtBox{
+    position: sticky;
+    top: 1px;
+    background-color: #cee4e4;
+    border-radius: 8px;
+    margin: 1% auto;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+#feedBox .createThought{
+    display: block;
+    color: inherit;
+    font-weight: 600;
+    font-size: 150%;
+}
+
+#feedBox .createThought:hover, #feedBox .createThought:active, #feedBox .createThought:visited, #feedBox .createThought:focus{
+    color: rgb(102, 99, 99);
+}
+
+.noteText{
+    background-color: inherit;
+    width: 80%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 150%;    
+    margin: auto;
+    border: none;
+    white-space: pre-wrap;
+    word-wrap: break-word; 
+    word-break: keep-all;
+    overflow-wrap: normal;
+}

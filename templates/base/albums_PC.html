@@ -1,0 +1,28 @@
+<!-- Styles are set in static/common/css/albums_style_PC.css -->
+<div class="albumsBox">
+
+    {% for name, desc, pic, id, custom in albums %}
+    <div class="albumBox">
+        {% if owner %}
+            {% include "dropdowns/album_Dropdown_PC.html" %}
+        {% endif %}
+        <div class="albumMainPicture">
+            <img class="imgg albumRef" src="{% if pic %}{{ pic.url }}{% else %}{% static 'core/images/album_default.png' %}{% endif %}" alt="{{ name }}">
+        </div>
+
+        <div class="albumName">
+            <p class="albumHeader albumRef">{{ name }}</p>
+        </div>
+
+        <div class="albumDescription" hidden="hidden">
+            {{ desc }}
+        </div>
+        {% block albumRef %}
+            <a></a>
+        {% endblock albumRef %}
+        
+
+    </div> 
+    {% endfor %}
+
+</div>

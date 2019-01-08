@@ -1,0 +1,142 @@
+#pageContent{
+    width: 100%;
+    height: 100%;
+}
+
+#leftMenu{
+    overflow: scroll;
+    width: 20%;
+    position: fixed;
+    top: 0%;
+    right: 80%;
+    bottom: 0%;
+    left: 0%;
+    border-right: 2px solid #742828;  
+}
+
+.lm{
+    padding: 10% 0% 0% 5%;
+    list-style-type: none;
+}
+
+.lm-item{
+    margin: auto auto 5% auto;
+    
+}
+
+.lmRef:link{
+    color: #742828;
+    font-size: 130%;
+    width: 100%;
+    display: block;
+    outline: 0;
+}
+
+.lmRef:visited{
+    color: #742828;
+    font-size: 130%;
+    width: 100%;
+    display: block;
+    outline: 0;
+}
+
+.lmRef:hover{
+    background-color: #e2cbb1;
+    color: #742828;
+}
+
+.lmRef:active{
+    color: #742828;
+    font-size: 130%;
+    width: 100%;
+    display: block;
+    outline: 0;
+}
+
+#logo{
+    color: #742828;
+    text-align: center;
+    font-size: 250%;
+}
+
+#logo-container{
+    margin: 13% 0% 17% 0%;
+    margin-bottom: 17%;
+    text-align: center;
+}
+
+#rightMenu{
+    overflow: scroll;
+    position: fixed;
+    left: 80%;
+    top: 0%;
+    right: 0%;
+    bottom:0%;
+    width: 20%;
+    border-left: 2px solid #742828;
+}
+
+.rm{
+    padding: 10% 5% 0% 5%;
+    list-style-type: none;
+    position: relative;
+    width: 100%;
+}
+
+.rm-item{
+    margin-bottom: 7%;
+    width: 100%;
+    text-align: center;
+}
+
+.rmRef:active{
+    color: #742828;
+    font-size: 130%;
+    width: 100%;
+    outline: 0;
+    display: block;
+}
+
+.rmRef:link{
+    color: #742828;
+    font-size: 130%;
+    width: 100%;
+    outline: 0;
+    display: block;
+}
+
+.rmRef:visited{
+    color: #742828;
+    font-size: 130%;
+    width: 100%;
+    outline: 0;
+    display: block;
+}
+
+.rmRef:hover{
+    background-color: #e2cbb1;
+    color: #742828;
+}
+
+.rmRef:active{
+    color: #742828;
+    font-size: 130%;
+    width: 100%;
+    outline: 0;
+    display: block;
+}
+/*
+<li class="rm-item">
+    <a class="rmRef" href="#" id="recommendedSection">Recommended</a>
+</li> */
+
+#content{
+    background-color: inherit;
+    overflow: scroll;
+    position: absolute;
+    right: 20%;
+    left: 20%;
+    bottom: 0%;
+    top:0%;
+    width: 60%;
+}
